@@ -7,11 +7,11 @@
 
     <ServiceManifestImport>
         <ServiceManifestRef ServiceManifestName="QueryService" ServiceManifestVersion="1.0.0" />
-            <ResourceOverrides>
-                <Endpoints>
-                    <Endpoint Name="ServiceEndpoint" Protocol="tcp" Port="[QueryService_Port]" />
-                </Endpoints>
-            </ResourceOverrides>
+        <ResourceOverrides>
+            <Endpoints>
+                <Endpoint Name="ServiceEndpoint" Protocol="tcp" Port="[QueryService_Port]" />
+            </Endpoints>
+        </ResourceOverrides>
     </ServiceManifestImport>
 
     <ServiceTemplates>
