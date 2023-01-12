@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"queryservice/logger"
 	"strings"
 	"syscall"
@@ -90,7 +91,7 @@ func main() {
 		logFolderPath = getEnvironmentVariable("Fabric_Folder_App_Log")
 	}
 
-	logFilePath := fmt.Sprintf("%s\\service.log", logFolderPath)
+	logFilePath := filepath.Join(logFolderPath, "service.log")
 
 	correlationId := uuid.New().String()
 
